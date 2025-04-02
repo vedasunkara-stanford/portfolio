@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Your Name - Portfolio</title>
+  <meta charset="utf-8" />
+  <title>Veda Sunkara - Portfolio</title>
   <style>
     body {
       font-family: sans-serif;
-      max-width: 800px;
+      max-width: 900px;
       margin: 20px auto;
       line-height: 1.6;
       padding: 0 20px;
     }
-    header {
-      text-align: center;
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Headings */
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+
+    /* Photo Grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
       margin-bottom: 40px;
     }
-    h1 {
+    .photo-grid figure {
       margin: 0;
+      text-align: center;
     }
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+    .photo-grid figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Publications */
     .publication-list {
       list-style-type: none;
       padding-left: 0;
@@ -33,31 +73,19 @@
       text-decoration: underline;
     }
 
-    /* --- Photo Gallery Section --- */
-    .photo-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin: 20px 0;
-    }
-    .photo-gallery figure {
-      max-width: 300px;
-      margin: 0;
+    footer {
+      margin-top: 40px;
       text-align: center;
-    }
-    .photo-gallery img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-    }
-    .photo-gallery figcaption {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #555;
+      color: #666;
     }
   </style>
 </head>
 <body>
+    <!-- Simple Nav with two links -->
+  <nav>
+    <a href="#photography">Photography</a>
+    <a href="#publications">Publications</a>
+  </nav>
   <header>
     <h1>Veda Sunkara</h1>
     <p>Hi! My name is Veda and I am a first year PhD student in environment and resources at the Stanford Doerr School of Sustainability. I am interested in leveraging remote sensing and machine learning tools to develop community-centered tools for climate change adaptation. My work focuses on minimizing harm to frontline communities, leveraging principles of mutual aid and insights from large-scale spatial data to plan for escalating climate extremes effectively. I love traveling, running, and playing basketball; here you can find a select set of publications, as well as some photography from the past few years.</p>
@@ -66,53 +94,93 @@
   <!-- ======================
        Travel/Exploration Photos
        ====================== -->
-  <section>
-    <h2>Travel &amp; Exploration</h2>
-    <div class="photo-gallery">
-      <figure>
-        <img src="images/travel1.jpg" alt="Description of location or scene" />
-        <figcaption>Caption for travel photo #1</figcaption>
-      </figure>
-      <figure>
-        <img src="images/travel2.jpg" alt="Description of location or scene" />
-        <figcaption>Caption for travel photo #2</figcaption>
-      </figure>
-      <!-- Add more <figure> blocks as needed -->
-    </div>
-  </section>
+    <section id="photography">
+        <h2>Photography</h2>
+        <div class="photo-grid">
+          <figure>
+            <img src="images/bike.png" alt="Photo 1" />
+            <figcaption>Caption for Photo 1</figcaption>
+          </figure>
+          <figure>
+            <img src="images/cdmx_house.png" alt="Photo 2" />
+            <figcaption>Caption for Photo 2</figcaption>
+          </figure>
+          <figure>
+            <img src="images/thatha.png" alt="Replace" />
+            <figcaption>Caption for Photo 3</figcaption>
+          </figure>
+          <figure>
+            <img src="images/cdmx.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/hawaii.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/madison.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/miyajima.png" alt="Replace" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/naples.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/ocoa.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/pinnacles.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/takao.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bk.png" alt="Photo 4" />
+            <figcaption>Caption for Photo 4</figcaption>
+          </figure>
+          <!-- Add more <figure> blocks as desired -->
+        </div>
+    </section>
 
   <!-- ======================
        Publications
        ====================== -->
-  <section>
+  <section id="publications">
     <h2>Publications</h2>
     <ul class="publication-list">
       <li>
-        J Frame, T Nair, V Sunkara, et. al. (Geophysical Research Letters 2024). 
+        J Frame, T Nair, <b>V Sunkara</b>, et. al. (Geophysical Research Letters 2024). 
         <em>Rapid Inundation Mapping Using the US National Water Model, Satellite Observations, and a Convolutional Neural Network</em>
         <br/>
         <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL109424">[Link to Paper]</a>
       </li>
       <li>
-        P Popien, O D'Hondt, V Sunkara, S Chakrabarti (IGARSS 2023, Paper Track).
+        P Popien, O D'Hondt, <b>V Sunkara</b>, S Chakrabarti (IGARSS 2023, Paper Track).
         <em>Deep Learning Based Urban Flood Mapping from High Resolution Capella Space SAR Imagery</em>
         <br/>
         <a href="https://ieeexplore.ieee.org/abstract/document/10281768">[Link to Paper]</a>
       </li>
       <li>
-        T Nair, V Sunkara, J Frame, et. al. (NeurIPS Climate Change AI 2022). 
+        T Nair, <b>V Sunkara</b>, J Frame, et. al. (NeurIPS Climate Change AI 2022). 
         <em>Deep Hydrology: Hourly, Gap-Free Flood Maps Through Joint Satellite and Hydrologic Modelling</em>
         <br/>
         <a href="https://www.climatechange.ai/papers/neurips2022/20">[Link to Paper]</a>
       </li>
       <li>
-        V Sunkara, N Leach, S Ganju (NeurIPS Climate Change AI 2021). 
+        <b>V Sunkara</b>, N Leach, S Ganju (NeurIPS Climate Change AI 2021). 
         <em>Memory to Map: Improving Radar Flood Maps with Temporal Context and Semantic Segmentation</em>
         <br/>
         <a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2021/9/paper.pdf">[Link to Paper]</a>
       </li>
       <li>
-        V Sunkara, M Purri, BL Saux, J Adams (NeurIPS Climate Change AI 2020). 
+        <b>V Sunkara</b>, M Purri, BL Saux, J Adams (NeurIPS Climate Change AI 2020). 
         <em>Street to Cloud: Improving Flood Maps with Crowdsourcing and Semantic Segmentation</em>
         <br/>
         <a href="https://arxiv.org/abs/2011.08010">[Link to Paper]</a>
@@ -127,47 +195,47 @@
     <h2>Conference Presentations and Posters</h2>
     <ul class="publication-list">
       <li>
-        V Sunkara, J Frame, T Nair, P Popien, (Keynote for HydroML 2022 at Penn State University).
+        <b>V Sunkara</b>, J Frame, T Nair, P Popien, (Keynote for HydroML 2022 at Penn State University).
         <em>Leveraging Deep Learning to Generate Hourly Flood Extent Maps Using Hydraulic and Hydrologic States</em>
         <br/>
       </li>
       <li>
-        N Leach, V Sunkara, P Popien, C Doyle (AGU 2022). 
+        N Leach, <b>V Sunkara</b>, P Popien, C Doyle (AGU 2022). 
         <em>Daily Flood Mapping Using U-Nets for MODIS and VIIRS</em>
         <br/>
       </li>
       <li>
-        JM Frame, V Sunkara, T Nair, et. al. (AGU 2022). 
+        JM Frame, <b>V Sunkara</b>, T Nair, et. al. (AGU 2022). 
         <em>Flood maps across CONUS using the US National Water Model, satellite observations and convolutional neural networks</em>
         <br/>
       </li>
       <li>
-        JM Frame, V Sunkara, S Chakrabarti, et. al. (Frontiers in Hydrology 2022).
+        JM Frame, <b>V Sunkara</b>, S Chakrabarti, et. al. (Frontiers in Hydrology 2022).
         <em>Intelligent flood maps: combining satellite observations with hydrologic modeling for high temporal resolution flood maps</em>
         <br/>
       </li>
       <li>
-        P Popien, V Sunkara, N Leach, B Tellman (AGU 2021).
+        P Popien, <b>V Sunkara</b>, N Leach, B Tellman (AGU 2021).
         <em>Cost-Effective Global Flood Segmentation using Convolutional Neural Networks, Sentinel-1 and Active Learning</em>
         <br/>
       </li>
       <li>
-        S Chakrabarti, P Popien, V Sunkara, et. al. (AGU 2021).
+        S Chakrabarti, P Popien, <b>V Sunkara</b>, et. al. (AGU 2021).
         <em>Understanding the dynamics of flood inundation extent through fusion of satellite based passive microwave, active microwave and optical imagery</em>
         <br/>
       </li>
       <li>
-        O Levari, V Sunkara, C Erickson, et. al. (AGU 2021).
+        O Levari, <b>V Sunkara</b>, C Erickson, et. al. (AGU 2021).
         <em>Using Managed Apache Beam Pipelines with Geospatial Open-Source Standards to Scale Up Convolutional Network Deployment for Flood Mapping and Improved Disaster Response</em>
         <br/>
       </li>
       <li>
-        B Tellman, V Sunkara, T Anderson, et. al. (AGU 2020).
+        B Tellman, <b>V Sunkara</b>, T Anderson, et. al. (AGU 2020).
         <em>Leveraging machine learning to improve satellite flood detection: seeing through (thin) clouds and identifying features</em>
         <br/>
       </li>
       <li>
-        V Sunkara, C Doyle, H Kim et. al. (AGU 2020).
+        <b>V Sunkara</b>, C Doyle, H Kim et. al. (AGU 2020).
         <em>Leveraging Soil Moisture for Early Flood Detection</em>
         <br/>
       </li>
@@ -177,5 +245,84 @@
   <footer>
     <p>Last updated: 3/30/2025</p>
   </footer>
+
+<!-- ==============
+    JavaScript for Carousel
+    ============== -->
+    <script>
+        (function() {
+          const VISIBLE_SLIDES = 2; // how many slides are visible at once
+          const SLIDE_WIDTH_PERCENT = 100 / VISIBLE_SLIDES; // each slide's width as % of container
+    
+          const track = document.getElementById('carouselTrack');
+          const slides = Array.from(track.children);
+          const prevBtn = document.getElementById('prevBtn');
+          const nextBtn = document.getElementById('nextBtn');
+    
+          // Clone slides at beginning and end
+          const clonesBefore = slides.slice(-(VISIBLE_SLIDES - 1)).map(s => s.cloneNode(true));
+          const clonesAfter = slides.slice(0, (VISIBLE_SLIDES - 1)).map(s => s.cloneNode(true));
+    
+          clonesBefore.forEach(clone => track.insertBefore(clone, track.firstChild));
+          clonesAfter.forEach(clone => track.appendChild(clone));
+    
+          // Updated slides array with clones
+          const allSlides = Array.from(track.children);
+          const totalSlides = allSlides.length;
+    
+          // Set each slide's width (so 2 slides fill 100%, for example)
+          allSlides.forEach(slide => {
+            slide.style.width = SLIDE_WIDTH_PERCENT + '%';
+          });
+    
+          // track width = totalSlides * (the width of one slide in %)
+          track.style.width = totalSlides * SLIDE_WIDTH_PERCENT + '%';
+    
+          // Start index so first real slide is in view
+          let currentIndex = clonesBefore.length;
+    
+          function updateCarousel(transition = true) {
+            if (!transition) {
+              track.style.transition = 'none';
+            } else {
+              track.style.transition = 'transform 0.5s ease';
+            }
+            const offset = - (currentIndex * SLIDE_WIDTH_PERCENT);
+            track.style.transform = `translateX(${offset}%)`;
+          }
+    
+          // No animation on initial load
+          updateCarousel(false);
+    
+          // Next
+          nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            updateCarousel(true);
+            track.addEventListener('transitionend', handleTransitionEnd);
+          });
+    
+          // Prev
+          prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            updateCarousel(true);
+            track.addEventListener('transitionend', handleTransitionEnd);
+          });
+    
+          function handleTransitionEnd() {
+            // if we moved right past the real slides
+            if (currentIndex >= slides.length + clonesBefore.length) {
+              currentIndex = clonesBefore.length;
+              updateCarousel(false);
+            }
+            // if we moved left past the first real slides
+            if (currentIndex < clonesBefore.length) {
+              currentIndex = slides.length + clonesBefore.length - 1;
+              updateCarousel(false);
+            }
+            // remove the event listener so we don’t keep triggering
+            track.removeEventListener('transitionend', handleTransitionEnd);
+          }
+        })();
+      </script>
 </body>
 </html>
