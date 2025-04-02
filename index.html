@@ -9,6 +9,7 @@
       max-width: 800px;
       margin: 20px auto;
       line-height: 1.6;
+      padding: 0 20px;
     }
     header {
       text-align: center;
@@ -17,72 +18,164 @@
     h1 {
       margin: 0;
     }
-    .photos {
-      display: flex;
-      gap: 10px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-    .photos img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 4px;
-    }
     .publication-list {
       list-style-type: none;
       padding-left: 0;
     }
     .publication-list li {
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
     .publication-list a {
-      text-decoration: none;
       color: #0066cc;
+      text-decoration: none;
     }
     .publication-list a:hover {
       text-decoration: underline;
+    }
+
+    /* --- Photo Gallery Section --- */
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .photo-gallery figure {
+      max-width: 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .photo-gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .photo-gallery figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Your Name</h1>
-    <p>Short description about who you are, your role, and your interests.</p>
+    <h1>Veda Sunkara</h1>
+    <p>Hi! My name is Veda and I am a first year PhD student in environment and resources at the Stanford Doerr School of Sustainability. I am interested in leveraging remote sensing and machine learning tools to develop community-centered tools for climate change adaptation. My work focuses on minimizing harm to frontline communities, leveraging principles of mutual aid and insights from large-scale spatial data to plan for escalating climate extremes effectively. I love traveling, running, and playing basketball; here you can find a select set of publications, as well as some photography from the past few years.</p>
   </header>
 
-  <section class="photos">
-    <!-- Add your images here -->
-    <img src="images/photo1.jpg" alt="Photo 1 Description" />
-    <img src="images/photo2.jpg" alt="Photo 2 Description" />
-    <!-- ... Add as many as you like -->
+  <!-- ======================
+       Travel/Exploration Photos
+       ====================== -->
+  <section>
+    <h2>Travel &amp; Exploration</h2>
+    <div class="photo-gallery">
+      <figure>
+        <img src="images/travel1.jpg" alt="Description of location or scene" />
+        <figcaption>Caption for travel photo #1</figcaption>
+      </figure>
+      <figure>
+        <img src="images/travel2.jpg" alt="Description of location or scene" />
+        <figcaption>Caption for travel photo #2</figcaption>
+      </figure>
+      <!-- Add more <figure> blocks as needed -->
+    </div>
   </section>
 
+  <!-- ======================
+       Publications
+       ====================== -->
   <section>
     <h2>Publications</h2>
     <ul class="publication-list">
-      <!-- Example publications. Replace with your own -->
       <li>
-        [2023] <strong>Title of Publication 1</strong><br/>
-        Authors: You, Someone Else <br/>
-        <em>Journal/Conference Name</em> <br/>
-        <a href="https://scholar.google.com/.../pdf" target="_blank">PDF</a> | 
-        <a href="https://doi.org/XXX" target="_blank">DOI</a> | 
-        <a href="https://scholar.google.com/... " target="_blank">Google Scholar</a>
+        J Frame, T Nair, V Sunkara, et. al. (Geophysical Research Letters 2024). 
+        <em>Rapid Inundation Mapping Using the US National Water Model, Satellite Observations, and a Convolutional Neural Network</em>
+        <br/>
+        <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL109424">[Link to Paper]</a>
       </li>
       <li>
-        [2022] <strong>Title of Publication 2</strong><br/>
-        Authors: You, Someone Else <br/>
-        <em>Journal/Conference Name</em> <br/>
-        <a href="https://scholar.google.com/.../pdf" target="_blank">PDF</a> | 
-        <a href="https://doi.org/XXX" target="_blank">DOI</a> | 
-        <a href="https://scholar.google.com/... " target="_blank">Google Scholar</a>
+        P Popien, O D'Hondt, V Sunkara, S Chakrabarti (IGARSS 2023, Paper Track).
+        <em>Deep Learning Based Urban Flood Mapping from High Resolution Capella Space SAR Imagery</em>
+        <br/>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10281768">[Link to Paper]</a>
       </li>
-      <!-- Continue listing all your publications in a similar format -->
+      <li>
+        T Nair, V Sunkara, J Frame, et. al. (NeurIPS Climate Change AI 2022). 
+        <em>Deep Hydrology: Hourly, Gap-Free Flood Maps Through Joint Satellite and Hydrologic Modelling</em>
+        <br/>
+        <a href="https://www.climatechange.ai/papers/neurips2022/20">[Link to Paper]</a>
+      </li>
+      <li>
+        V Sunkara, N Leach, S Ganju (NeurIPS Climate Change AI 2021). 
+        <em>Memory to Map: Improving Radar Flood Maps with Temporal Context and Semantic Segmentation</em>
+        <br/>
+        <a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2021/9/paper.pdf">[Link to Paper]</a>
+      </li>
+      <li>
+        V Sunkara, M Purri, BL Saux, J Adams (NeurIPS Climate Change AI 2020). 
+        <em>Street to Cloud: Improving Flood Maps with Crowdsourcing and Semantic Segmentation</em>
+        <br/>
+        <a href="https://arxiv.org/abs/2011.08010">[Link to Paper]</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ======================
+       Conference Presentations & Posters
+       ====================== -->
+  <section>
+    <h2>Conference Presentations and Posters</h2>
+    <ul class="publication-list">
+      <li>
+        V Sunkara, J Frame, T Nair, P Popien, (Keynote for HydroML 2022 at Penn State University).
+        <em>Leveraging Deep Learning to Generate Hourly Flood Extent Maps Using Hydraulic and Hydrologic States</em>
+        <br/>
+      </li>
+      <li>
+        N Leach, V Sunkara, P Popien, C Doyle (AGU 2022). 
+        <em>Daily Flood Mapping Using U-Nets for MODIS and VIIRS</em>
+        <br/>
+      </li>
+      <li>
+        JM Frame, V Sunkara, T Nair, et. al. (AGU 2022). 
+        <em>Flood maps across CONUS using the US National Water Model, satellite observations and convolutional neural networks</em>
+        <br/>
+      </li>
+      <li>
+        JM Frame, V Sunkara, S Chakrabarti, et. al. (Frontiers in Hydrology 2022).
+        <em>Intelligent flood maps: combining satellite observations with hydrologic modeling for high temporal resolution flood maps</em>
+        <br/>
+      </li>
+      <li>
+        P Popien, V Sunkara, N Leach, B Tellman (AGU 2021).
+        <em>Cost-Effective Global Flood Segmentation using Convolutional Neural Networks, Sentinel-1 and Active Learning</em>
+        <br/>
+      </li>
+      <li>
+        S Chakrabarti, P Popien, V Sunkara, et. al. (AGU 2021).
+        <em>Understanding the dynamics of flood inundation extent through fusion of satellite based passive microwave, active microwave and optical imagery</em>
+        <br/>
+      </li>
+      <li>
+        O Levari, V Sunkara, C Erickson, et. al. (AGU 2021).
+        <em>Using Managed Apache Beam Pipelines with Geospatial Open-Source Standards to Scale Up Convolutional Network Deployment for Flood Mapping and Improved Disaster Response</em>
+        <br/>
+      </li>
+      <li>
+        B Tellman, V Sunkara, T Anderson, et. al. (AGU 2020).
+        <em>Leveraging machine learning to improve satellite flood detection: seeing through (thin) clouds and identifying features</em>
+        <br/>
+      </li>
+      <li>
+        V Sunkara, C Doyle, H Kim et. al. (AGU 2020).
+        <em>Leveraging Soil Moisture for Early Flood Detection</em>
+        <br/>
+      </li>
     </ul>
   </section>
 
   <footer>
-    <p>Last updated: <!-- Insert date or short note --></p>
+    <p>Last updated: 3/30/2025</p>
   </footer>
 </body>
 </html>
